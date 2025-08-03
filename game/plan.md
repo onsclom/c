@@ -1,0 +1,4 @@
+- core editor functions
+  - add/remove tiles
+  - no clip around
+- core physics

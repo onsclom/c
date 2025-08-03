@@ -1,5 +1,11 @@
 #include "raylib/raylib.h"
-#include <stddef.h>
+#include <math.h>
+#include <string.h>
+
+typedef struct {
+  Rectangle rect;
+  float dy;
+} Player;
 
 #define DEFINE_LIST(type, name, max_count)                                     \
   typedef struct {                                                             \
@@ -7,11 +13,6 @@
     int count;                                                                 \
     int capacity;                                                              \
   } name
-
-typedef struct {
-  Rectangle rect;
-  float dy;
-} Player;
 
 typedef struct {
   // width and height always 1
@@ -68,6 +69,43 @@ int main(void) {
     const double deltaTime = currentFrameTime - lastFrameTime;
     lastFrameTime = currentFrameTime;
 
+    Vector2 mouseInScreen = GetMousePosition();
+    Vector2 mouseInWorld = GetScreenToWorld2D(mouseInScreen, game.camera);
+    // handle editor controls
+    Vector2 mouseTilePos = {.x = roundf(mouseInWorld.x),
+                            .y = roundf(mouseInWorld.y)};
+    {
+      if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+        // check if tile already exists
+        bool tileExists = false;
+        for (int i = 0; i < game.tiles.count; i++) {
+          Tile tile = game.tiles.items[i];
+          if (tile.x == mouseTilePos.x && tile.y == mouseTilePos.y) {
+            tileExists = true;
+            break;
+          }
+        }
+        // add tile
+        if (tileExists == false && game.tiles.count < game.tiles.capacity) {
+          Tile newTile = {mouseTilePos.x, mouseTilePos.y};
+          game.tiles.items[game.tiles.count++] = newTile;
+        }
+      }
+
+      if (IsMouseButtonDown(MOUSE_BUTTON_RIGHT)) {
+        // remove tile
+        for (int i = 0; i < game.tiles.count; i++) {
+          Tile tile = game.tiles.items[i];
+          if (tile.x == mouseTilePos.x && tile.y == mouseTilePos.y) {
+            memmove(&game.tiles.items[i], &game.tiles.items[i + 1],
+                    (game.tiles.count - i - 1) * sizeof(Tile));
+            game.tiles.count--;
+            break;
+          }
+        }
+      }
+    }
+
     {
       float speed = 10;
       if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A)) {
@@ -85,7 +123,7 @@ int main(void) {
 
       float zoomSpeed = 0.5f;
       if (IsKeyDown(KEY_EQUAL)) {
-        game.zoomFactor += zoomSpeed * deltaTime;
+        game.zoomFactor += zoomSpeed * 2 * deltaTime;
       }
       if (IsKeyDown(KEY_MINUS)) {
         game.zoomFactor -= zoomSpeed * deltaTime;
@@ -98,7 +136,10 @@ int main(void) {
         game.camera.offset = (Vector2){screenWidth / 2.0f, screenHeight / 2.0f};
         game.camera.zoom =
             (float)screenWidth / defaultGameWidth * game.zoomFactor;
-        game.camera.target = (Vector2){0, 0};
+        game.camera.target = (Vector2){
+            game.player.rect.x,
+            game.player.rect.y,
+        };
       }
     }
 
@@ -106,28 +147,39 @@ int main(void) {
     ClearBackground(RAYWHITE);
     BeginMode2D(game.camera);
     {
+
+      // draw tiles
+      for (int i = 0; i < game.tiles.count; i++) {
+        Tile tile = game.tiles.items[i];
+        DrawRectanglePro((Rectangle){tile.x, tile.y, 1.0f, 1.0f},
+                         (Vector2){0.5f, 0.5f}, 0.0f, GREEN);
+      }
+
       DrawRectanglePro(game.player.rect,
                        (Vector2){game.player.rect.width / 2.0f,
                                  game.player.rect.height / 2.0f},
                        0.0f, BLUE);
-      DrawRectanglePro((Rectangle){-100, 100, game.player.rect.width,
-                                   game.player.rect.height},
-                       (Vector2){game.player.rect.width / 2.0f,
-                                 game.player.rect.height / 2.0f},
-                       0.0f, Fade(GRAY, 0.5f));
+
+      // draw cursor
+      DrawRectangleLinesEx(
+          (Rectangle){mouseTilePos.x - .5f, mouseTilePos.y - .5, 1.0f, 1.0f},
+          0.1f, RED);
     }
 
-    // get mouse position in world coordinates
-    Vector2 mousePosition = GetMousePosition();
-    Vector2 mouseInCamera = GetScreenToWorld2D(mousePosition, game.camera);
-    // draw a circle at the mouse position
-    DrawCircleV(mouseInCamera, 1, RED);
-
     EndMode2D();
-    DrawTextEx(fontTtf, "hello world\nwow", (Vector2){20.0f, 100.0f},
-               (float)fontTtf.baseSize / dpi.x, 2, GRAY);
-    DrawText(TextFormat("FPS: %d", GetFPS()), 10, 10, 20, DARKGRAY);
-    DrawText(TextFormat("ZOOM: %.2f", game.zoomFactor), 10, 40, 20, DARKGRAY);
+    DrawTextEx(fontTtf, TextFormat("FPS: %d", GetFPS()), (Vector2){10, 10},
+               (float)fontTtf.baseSize / dpi.x, 2, DARKGRAY);
+    DrawTextEx(fontTtf, TextFormat("Zoom: %.2f", game.zoomFactor),
+               (Vector2){10, 10 + 30 * 1}, (float)fontTtf.baseSize / dpi.x, 2,
+               DARKGRAY);
+    DrawTextEx(fontTtf,
+               TextFormat("Mouse pos: %f, %f", mouseInWorld.x, mouseInWorld.y),
+               (Vector2){10, 10 + 30 * 2}, (float)fontTtf.baseSize / dpi.x, 2,
+               DARKGRAY);
+    DrawTextEx(fontTtf,
+               TextFormat("Tile pos: %f, %f", mouseTilePos.x, mouseTilePos.y),
+               (Vector2){10, 10 + 30 * 3}, (float)fontTtf.baseSize / dpi.x, 2,
+               DARKGRAY);
 
     EndDrawing();
   }
