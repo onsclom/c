@@ -13,5 +13,16 @@
     "program": "$ZED_WORKTREE_ROOT/game/a.out",
     "request": "launch",
     "adapter": "CodeLLDB"
+  },
+  {
+    "label": "Debug odin game",
+    "build": {
+      "command": "odin build . -debug",
+      "cwd": "$ZED_WORKTREE_ROOT/game"
+    },
+    "cwd": "$ZED_WORKTREE_ROOT/game",
+    "program": "$ZED_WORKTREE_ROOT/game/game",
+    "request": "launch",
+    "adapter": "CodeLLDB"
   }
 ]
