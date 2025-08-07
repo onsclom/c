@@ -1,11 +1,11 @@
 player: {
 	rect: {
-		x: -3.26009464
-		y: 5.66030645
+		x: 3.19696856
+		y: 7.44071436
 		width: 0.80000001
 		height: 1.20000005
 	}
-	dy: 4.79598665
+	dy: -6.83199358
 	tried_jump: false
 }
 camera: {
@@ -14,8 +14,8 @@ camera: {
 		300.00000000
 	]
 	target: [
-		-3.26009464
-		5.67338181
+		3.19025159
+		7.44071436
 	]
 	rotation: 0.00000000
 	zoom: 30.00000000
@@ -24,5125 +24,6222 @@ zoom_factor: 1.00000000
 tiles: [
 	{
 		active: true
+		x: -6
+		y: 16
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: -6
+		y: 17
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: -5
+		y: 17
+		variant: {
+
+		}
+	}
+	{
+		active: true
 		x: -4
-		y: 12
+		y: 17
+		variant: {
+
+		}
 	}
 	{
 		active: true
 		x: -3
-		y: 12
+		y: 17
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: -4
+		y: 16
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: -3
+		y: 16
+		variant: {
+
+		}
 	}
 	{
 		active: true
 		x: -2
-		y: 12
+		y: 16
+		variant: {
+
+		}
 	}
 	{
 		active: true
 		x: -1
-		y: 12
+		y: 16
+		variant: {
+
+		}
 	}
 	{
 		active: true
 		x: 0
-		y: 12
+		y: 16
+		variant: {
+
+		}
 	}
 	{
 		active: true
 		x: 0
-		y: 11
+		y: 17
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: 0
+		y: 18
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: -1
+		y: 17
+		variant: {
+			angle: 0.00000000
+		}
+	}
+	{
+		active: true
+		x: -1
+		y: 18
+		variant: {
+			angle: 0.00000000
+		}
+	}
+	{
+		active: true
+		x: -1
+		y: 19
+		variant: {
+			angle: 0.00000000
+		}
+	}
+	{
+		active: true
+		x: -1
+		y: 20
+		variant: {
+			angle: 0.00000000
+		}
+	}
+	{
+		active: true
+		x: 0
+		y: 20
+		variant: {
+			angle: 0.00000000
+		}
 	}
 	{
 		active: true
 		x: 1
-		y: 11
+		y: 20
+		variant: {
+			angle: 0.00000000
+		}
 	}
 	{
 		active: true
 		x: 2
-		y: 10
+		y: 20
+		variant: {
+			angle: 0.00000000
+		}
+	}
+	{
+		active: true
+		x: 2
+		y: 19
+		variant: {
+			angle: 0.00000000
+		}
 	}
 	{
 		active: true
 		x: 3
-		y: 10
+		y: 19
+		variant: {
+			angle: 0.00000000
+		}
+	}
+	{
+		active: true
+		x: 3
+		y: 18
+		variant: {
+			angle: 0.00000000
+		}
+	}
+	{
+		active: true
+		x: 2
+		y: 17
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: 2
+		y: 16
+		variant: {
+
+		}
+	}
+	{
+		active: true
+		x: 3
+		y: 15
+		variant: {
+
+		}
 	}
 	{
 		active: true
 		x: 4
-		y: 9
-	}
-	{
-		active: true
-		x: 4
-		y: 8
-	}
-	{
-		active: true
-		x: 5
-		y: 8
+		y: 15
+		variant: {
+
+		}
 	}
 	{
 		active: true
 		x: 5
-		y: 7
+		y: 15
+		variant: {
+
+		}
 	}
 	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
-	}
-	{
-		active: false
-		x: 0
-		y: 0
+		active: true
+		x: 6
+		y: 15
+		variant: {
+
+		}
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 	{
 		active: false
 		x: 0
 		y: 0
+		variant: null
 	}
 ]
 editing: true
-physics_time_accumulator: -0.00103624
+editor: {
+	placing_variant: {
+
+	}
+}
+physics_time_accumulator: -0.00147033
 show_debug_ui: false
+mouse_in_screen: [
+	526.94921875
+	483.81250000
+]
+mouse_in_world: [
+	10.75522709
+	13.56779861
+]
+mouse_tile_pos: [
+	11
+	14
+]
