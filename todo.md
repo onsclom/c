@@ -1,0 +1,7 @@
+- web builds
+- hot reloading
+- game features:
+  - serializing/deserializing levels
+  - all the other tile types
+  - wall jumping
+  - sounds
