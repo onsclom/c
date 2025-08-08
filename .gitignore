@@ -1,4 +1,4 @@
-game.dSYM*
-src.bin*
-game/game
 .DS_Store
+build/*
+game_hot_reload.bin.dSYM*
+game_hot_reload.bin
