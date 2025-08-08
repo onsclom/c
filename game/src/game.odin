@@ -1,5 +1,6 @@
 package main
 
+import "core:encoding/cbor"
 import "core:encoding/json"
 import "core:fmt"
 import "core:math"
@@ -26,6 +27,7 @@ CannonTileVariant :: struct {
 	angle: f32,
 }
 TrampolineTileVariant :: struct {}
+
 Tile :: struct {
 	x:       i32,
 	y:       i32,
@@ -40,7 +42,6 @@ Tile :: struct {
 Level :: struct {
 	staticTiles: [MAX_TILES]Tile,
 }
-
 
 Editor :: struct {
 	placing_variant: union {
@@ -64,6 +65,7 @@ Game :: struct {
 	mouse_in_world:           rl.Vector2,
 	mouse_tile_pos:           [2]i32,
 }
+
 
 game := Game {
 	player = {rect = {0, 0, .8, 1.2}},
@@ -157,7 +159,7 @@ playing_update :: proc(delta_time: f32) {
 
 	game.physics_time_accumulator += delta_time
 	physic_tick := f32(1) / PHYSIC_HZ
-	for game.physics_time_accumulator >= 1 / PHYSIC_HZ {
+	for game.physics_time_accumulator >= physic_tick {
 		game.physics_time_accumulator -= physic_tick
 
 		extra_repel :: 0.0001 // small value to avoid collision issues
@@ -290,6 +292,14 @@ game_draw :: proc() {
 			rl.BLACK,
 		)
 	}
+
+	if (rl.GuiButton(
+			   {f32(rl.GetScreenWidth() - 100), 10, 90, 30},
+			   game.editing ? "Play" : "Edit",
+		   )) {
+		game.editing = !game.editing
+	}
+
 	rl.EndDrawing()
 }
 
@@ -336,13 +346,13 @@ editor_update :: proc(delta_time: f32) {
 
 	if rl.IsKeyPressed(.L) {
 		// load game state from file
-		data, success := os.read_entire_file("game_state.sjson", context.temp_allocator)
+		data, success := os.read_entire_file("game_state.cbor", context.temp_allocator)
 		if !success {
 			rl.TraceLog(.ERROR, "Failed to load game state")
 			return
 		}
 		{
-			err := json.unmarshal(data, &game, .SJSON, context.temp_allocator)
+			err := cbor.unmarshal(data, &game, {}, context.temp_allocator)
 			if err != nil {
 				rl.TraceLog(.ERROR, "Failed to unmarshal game state: %v", err)
 				return
@@ -352,12 +362,12 @@ editor_update :: proc(delta_time: f32) {
 
 	if rl.IsKeyPressed(.P) {
 		// save game state to file
-		data, err := json.marshal(game, {spec = .SJSON, pretty = true}, context.temp_allocator)
+		data, err := cbor.marshal(game, cbor.ENCODE_SMALL, context.temp_allocator)
 		if err != nil {
 			rl.TraceLog(.ERROR, "Failed to save game state: %v", err)
 			return
 		}
-		os.write_entire_file("game_state.sjson", data)
+		os.write_entire_file("game_state.cbor", data)
 	}
 }
 
