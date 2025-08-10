@@ -4,13 +4,16 @@ import "core:math"
 import rl "vendor:raylib"
 
 PLAYER_SPEED :: 7.5
+COYOTE_JUMP_TIME :: 0.2 // time in seconds to allow coyote jump
 
 Player :: struct {
-	rect:             rl.Rectangle,
-	dy:               f32,
-	grounded:         bool,
-	tried_jump:       bool,
-	can_shorten_jump: bool,
+	rect:                rl.Rectangle,
+	dy:                  f32,
+	grounded:            bool,
+	time_since_grounded: f32,
+	tried_jump:          bool,
+	can_coyote_jump:     bool,
+	can_shorten_jump:    bool,
 }
 
 player_update :: proc(delta_time: f32) {
@@ -66,9 +69,11 @@ player_update :: proc(delta_time: f32) {
 			// apply gravity
 			g.player.dy += physic_tick * 18
 			if g.player.tried_jump {
-				if (previously_grounded) {
+				if (previously_grounded || g.player.time_since_grounded < COYOTE_JUMP_TIME) &&
+				   g.player.can_coyote_jump {
 					g.player.dy = -10.0 // jump speed
 					g.player.can_shorten_jump = true
+					g.player.can_coyote_jump = false
 					rl.PlaySound(g.jump_sound)
 				}
 				g.player.tried_jump = false
@@ -92,6 +97,7 @@ player_update :: proc(delta_time: f32) {
 								extra_repel
 							g.player.dy = 0 // stop falling
 							g.player.grounded = true
+							g.player.can_coyote_jump = true
 						} else {
 							g.player.rect.y =
 								tile_rect.y +
@@ -120,12 +126,18 @@ player_update :: proc(delta_time: f32) {
 				}
 			}
 		}
+
+		if g.player.grounded {
+			g.player.time_since_grounded = 0
+		} else {
+			g.player.time_since_grounded += physic_tick
+		}
 	}
 
+	grace_margin :: 0.1 // shrink lava to favor player
 	// handle lava
 	for tile in g.tiles {
 		if tile.type != .LavaTile do continue
-		grace_margin :: 0.1 // shrink lava to favor player
 		tile_rect := rl.Rectangle {
 			f32(tile.x) + grace_margin,
 			f32(tile.y) + grace_margin,
@@ -142,7 +154,7 @@ player_update :: proc(delta_time: f32) {
 		if cannon_ball.remaining_life > 0 {
 			if circ_vs_rect_collide(
 				{cannon_ball.x, cannon_ball.y},
-				CANNON_CIRCLE_RADIUS,
+				CANNON_CIRCLE_RADIUS - grace_margin,
 				g.player.rect,
 			) {
 				kill_player()

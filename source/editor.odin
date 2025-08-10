@@ -39,12 +39,12 @@ editor_update :: proc(delta_time: f32) {
 			if tile.type != .None &&
 			   tile.x == float_mouse_tile[0] &&
 			   tile.y == float_mouse_tile[1] {
-				if tile.type == .CannonTile {
+				if tile.type == .CannonTile && g.editor.placing_type == .CannonTile {
 					if rl.IsMouseButtonPressed(.LEFT) {
 						tile.angle += math.PI / 2
 						// round to closest 90 degrees
 						tile.angle = math.round(tile.angle / (math.PI / 2)) * (math.PI / f32(2))
-						
+
 					}
 					shouldAddTile = false
 				} else {
