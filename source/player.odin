@@ -3,13 +3,14 @@ package game
 import "core:math"
 import rl "vendor:raylib"
 
-PLAYER_SPEED :: 10.0
+PLAYER_SPEED :: 7.5
 
 Player :: struct {
-	rect:       rl.Rectangle,
-	dy:         f32,
-	tried_jump: bool,
-	grounded:   bool,
+	rect:             rl.Rectangle,
+	dy:               f32,
+	grounded:         bool,
+	tried_jump:       bool,
+	can_shorten_jump: bool,
 }
 
 player_update :: proc(delta_time: f32) {
@@ -67,9 +68,15 @@ player_update :: proc(delta_time: f32) {
 			if g.player.tried_jump {
 				if (previously_grounded) {
 					g.player.dy = -10.0 // jump speed
+					g.player.can_shorten_jump = true
 					rl.PlaySound(g.jump_sound)
 				}
 				g.player.tried_jump = false
+			}
+			jump_keys_are_up := !rl.IsKeyDown(.SPACE) && !rl.IsKeyDown(.UP) && !rl.IsKeyDown(.W)
+			if g.player.can_shorten_jump && jump_keys_are_up && g.player.dy < 0 {
+				g.player.dy *= 0.5 // shorten jump
+				g.player.can_shorten_jump = false
 			}
 			player_dy := g.player.dy * physic_tick
 			g.player.rect.y += player_dy

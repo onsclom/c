@@ -9,7 +9,7 @@ FONT_SIZE :: 20
 INIT_WIDTH :: 600
 INIT_HEIGHT :: 600
 MAX_TILES :: 1024
-CANNON_FIRE_RATE :: 0.5
+CANNON_FIRE_RATE :: 1
 
 Game_Memory :: struct {
 	player:                      Player,
@@ -65,6 +65,7 @@ game_update :: proc() {
 	}
 
 	if rl.IsKeyPressed(.E) {
+		g.player.dy = 0
 		g.editing = !g.editing
 	}
 	zoom_speed: f32 = .5
@@ -75,11 +76,11 @@ game_update :: proc() {
 	}
 
 	{
-		default_game_width :: 20
+		default_game_height :: 20
 		screen_width := f32(rl.GetScreenWidth())
 		screen_height := f32(rl.GetScreenHeight())
 		g.camera.offset = {screen_width / 2, screen_height / 2}
-		g.camera.zoom = screen_width / default_game_width * g.zoom_factor
+		g.camera.zoom = screen_height / default_game_height * g.zoom_factor
 		g.camera.target = {g.player.rect.x, g.player.rect.y}
 	}
 
