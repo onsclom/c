@@ -6,15 +6,18 @@ import rl "vendor:raylib"
 PLAYER_SPEED :: 7.5
 COYOTE_JUMP_TIME :: 0.1 // time in seconds to allow coyote jump
 JUMP_BUFFER_TIME :: .1 // time in seconds to allow jump buffer
+ANGLE_AMOUNT :: 8
 
 Player :: struct {
 	rect:                rl.Rectangle,
+	dx:                  f32,
 	dy:                  f32,
 	grounded:            bool,
 	time_since_grounded: f32,
 	jump_buffer:         f32,
 	can_coyote_jump:     bool,
 	can_shorten_jump:    bool,
+	angle:               f32, // angle for rotation
 }
 
 player_update :: proc(delta_time: f32) {
@@ -36,21 +39,20 @@ player_update :: proc(delta_time: f32) {
 		extra_repel :: 0.00001 // small value to avoid collision issues
 		// handle movement and collisions in X axis
 		{
-			player_dx: f32 = 0
+			g.player.dx = 0 // reset dx for this tick
 			if (rl.IsKeyDown(.LEFT) || rl.IsKeyDown(.A)) {
-				player_dx = -PLAYER_SPEED * physic_tick // move left
-				g.player.rect.x += player_dx
+				g.player.dx += -PLAYER_SPEED * physic_tick // move left
 			}
 			if (rl.IsKeyDown(.RIGHT) || rl.IsKeyDown(.D)) {
-				player_dx = PLAYER_SPEED * physic_tick // move right
-				g.player.rect.x += player_dx
+				g.player.dx += PLAYER_SPEED * physic_tick // move right
 			}
+			g.player.rect.x += g.player.dx
 
 			for tile in g.tiles {
 				if tile.type != .SolidTile do continue
 				tile_rect := rl.Rectangle{f32(tile.x), f32(tile.y), 1.0, 1.0}
 				if is_colliding(g.player.rect, tile_rect) {
-					if player_dx > 0 {
+					if g.player.dx > 0 {
 						g.player.rect.x =
 							tile_rect.x -
 							(tile_rect.width / 2.0) -
@@ -72,6 +74,8 @@ player_update :: proc(delta_time: f32) {
 		{
 			// apply gravity
 			g.player.dy += physic_tick * 18
+			MAX_FALL_SPEED :: 20.0
+			g.player.dy = math.min(g.player.dy, MAX_FALL_SPEED)
 			if g.player.jump_buffer > 0 {
 				if (previously_grounded || g.player.time_since_grounded < COYOTE_JUMP_TIME) &&
 				   g.player.can_coyote_jump {
@@ -165,6 +169,16 @@ player_update :: proc(delta_time: f32) {
 				}
 			}
 		}
+
+		// animate player angle
+		{
+			target_angle: f32 = ANGLE_AMOUNT * math.sign(g.player.dx)
+			g.player.angle = math.lerp(
+				g.player.angle,
+				target_angle,
+				physic_tick * 20, // smoothing factor
+			)
+		}
 	}
 }
 
@@ -188,10 +202,17 @@ circ_vs_rect_collide :: proc(circle: rl.Vector2, radius: f32, rect: rl.Rectangle
 
 draw_player :: proc() {
 	player_color := g.editing ? rl.Fade(rl.BLUE, 0.5) : rl.BLUE
+
+	osc_strength := math.abs(g.player.angle) / ANGLE_AMOUNT * 4
+	rot_osc := math.sin(f32(rl.GetTime()) * 14) * osc_strength
+
+	hop_strength := math.abs(g.player.angle) / ANGLE_AMOUNT * .05
+	hop_osc := g.player.grounded ? math.abs(math.sin(f32(rl.GetTime()) * 13) * hop_strength) : 0
+
 	rl.DrawRectanglePro(
-		g.player.rect,
+		{g.player.rect.x, g.player.rect.y - hop_osc, g.player.rect.width, g.player.rect.height},
 		{g.player.rect.width, g.player.rect.height} / 2,
-		0,
+		g.player.angle + rot_osc,
 		player_color,
 	)
 }
