@@ -64,7 +64,7 @@ editor_update :: proc(delta_time: f32) {
 		}
 	}
 
-	LEVEL_FILE := "level.cbor"
+	LEVEL_FILE := "assets/level.cbor"
 
 	if rl.IsKeyPressed(.L) {
 		// load game state from file

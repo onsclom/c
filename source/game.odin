@@ -22,7 +22,6 @@ Game_Memory :: struct {
 	editing:                     bool,
 	editor:                      Editor,
 	physics_time_accumulator:    f32,
-	show_debug_ui:               bool, // TODO
 	mouse_in_screen:             rl.Vector2,
 	mouse_in_world:              rl.Vector2,
 	mouse_tile_pos:              [2]i32,
@@ -32,6 +31,7 @@ Game_Memory :: struct {
 	// sounds
 	jump_sound:                  rl.Sound,
 	death_sound:                 rl.Sound,
+	land_sound:                  rl.Sound,
 }
 
 g: ^Game_Memory
@@ -122,6 +122,7 @@ game_init :: proc() {
 		),
 		jump_sound = rl.LoadSound("assets/sounds/jump.wav"),
 		death_sound = rl.LoadSound("assets/sounds/death.wav"),
+		land_sound = rl.LoadSound("assets/sounds/land.wav"),
 	}
 
 	game_hot_reloaded(g)

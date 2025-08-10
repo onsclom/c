@@ -3,7 +3,7 @@ X sounds
 - tweak physics
 X implement death?
   - lava could just tp to spawn for now or something
-- variable jump height
+X variable jump height
 X only jump from ground
 X implement cannon
 - level menu and system?
