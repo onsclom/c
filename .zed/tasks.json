@@ -1,7 +1,7 @@
 [
   {
     "label": "start hot reload client",
-    "command": "./game_hot_reload.bin",
+    "command": "./scripts/build_hot_reload.sh && ./game_hot_reload.bin",
     "cwd": "$ZED_WORKTREE_ROOT"
   },
   {

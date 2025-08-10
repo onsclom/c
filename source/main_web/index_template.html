@@ -10,19 +10,24 @@
 	<meta name="viewport" content="width=device-width">
 
 	<style>
-		body { 
-			margin: 0px; 
-			overflow: hidden; 
+		body {
+			margin: 0px;
+			overflow: hidden;
 			background-color: black;
 		}
-		canvas.game_canvas { 
-			border: 0px none; 
+		canvas.game_canvas {
+			/*border: 0px none;
 			background-color: black;
 			padding-left: 0;
 			padding-right: 0;
 			margin-left: auto;
 			margin-right: auto;
-			display: block;
+			display: block;*/
+		  left: 0px;
+      top: 0px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
 		}
 	</style>
 </head>
@@ -63,8 +68,10 @@
 				e.main_start();
 
 				function send_resize() {
-					var canvas = document.getElementById('canvas');
-					e.web_window_size_changed(canvas.width, canvas.height);
+          const rect = canvas.getBoundingClientRect();
+      		canvas.width = rect.width * window.devicePixelRatio;
+      		canvas.height = rect.height * window.devicePixelRatio;
+  				e.web_window_size_changed(canvas.width , canvas.height);
 				}
 
 				window.addEventListener('resize', function(event) {
@@ -78,6 +85,10 @@
 
 				// Runs the "main loop".
 				function do_main_update() {
+  				var canvas = document.getElementById('canvas');
+          const rect = canvas.getBoundingClientRect();
+  				canvas.width = rect.width * window.devicePixelRatio;
+  				canvas.height = rect.height * window.devicePixelRatio;
 					if (!e.main_update()) {
 						e.main_end();
 
