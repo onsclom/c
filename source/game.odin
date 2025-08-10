@@ -94,7 +94,7 @@ game_init_window :: proc() {
 	rl.SetConfigFlags({.WINDOW_RESIZABLE, .WINDOW_HIGHDPI, .MSAA_4X_HINT})
 	rl.InitWindow(INIT_WIDTH, INIT_HEIGHT, "platformer")
 	rl.InitAudioDevice()
-	// rl.SetTargetFPS(500)
+	rl.SetTargetFPS(500)
 }
 
 @(export)

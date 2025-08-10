@@ -4,21 +4,25 @@ import "core:math"
 import rl "vendor:raylib"
 
 PLAYER_SPEED :: 7.5
-COYOTE_JUMP_TIME :: 0.2 // time in seconds to allow coyote jump
+COYOTE_JUMP_TIME :: 0.1 // time in seconds to allow coyote jump
+JUMP_BUFFER_TIME :: .1 // time in seconds to allow jump buffer
 
 Player :: struct {
 	rect:                rl.Rectangle,
 	dy:                  f32,
 	grounded:            bool,
 	time_since_grounded: f32,
-	tried_jump:          bool,
+	jump_buffer:         f32,
 	can_coyote_jump:     bool,
 	can_shorten_jump:    bool,
 }
 
 player_update :: proc(delta_time: f32) {
+	g.player.jump_buffer -= delta_time
+	g.player.jump_buffer = math.max(g.player.jump_buffer, 0)
+
 	if rl.IsKeyPressed(.SPACE) || rl.IsKeyPressed(.UP) || rl.IsKeyPressed(.W) {
-		g.player.tried_jump = true
+		g.player.jump_buffer = JUMP_BUFFER_TIME
 	}
 
 	g.physics_time_accumulator += delta_time
@@ -68,15 +72,15 @@ player_update :: proc(delta_time: f32) {
 		{
 			// apply gravity
 			g.player.dy += physic_tick * 18
-			if g.player.tried_jump {
+			if g.player.jump_buffer > 0 {
 				if (previously_grounded || g.player.time_since_grounded < COYOTE_JUMP_TIME) &&
 				   g.player.can_coyote_jump {
 					g.player.dy = -10.0 // jump speed
 					g.player.can_shorten_jump = true
 					g.player.can_coyote_jump = false
+					g.player.jump_buffer = 0
 					rl.PlaySound(g.jump_sound)
 				}
-				g.player.tried_jump = false
 			}
 			jump_keys_are_up := !rl.IsKeyDown(.SPACE) && !rl.IsKeyDown(.UP) && !rl.IsKeyDown(.W)
 			if g.player.can_shorten_jump && jump_keys_are_up && g.player.dy < 0 {
@@ -132,33 +136,33 @@ player_update :: proc(delta_time: f32) {
 		} else {
 			g.player.time_since_grounded += physic_tick
 		}
-	}
 
-	grace_margin :: 0.1 // shrink lava to favor player
-	// handle lava
-	for tile in g.tiles {
-		if tile.type != .LavaTile do continue
-		tile_rect := rl.Rectangle {
-			f32(tile.x) + grace_margin,
-			f32(tile.y) + grace_margin,
-			1.0 - 2 * grace_margin,
-			1.0 - 2 * grace_margin,
-		}
-		if is_colliding(g.player.rect, tile_rect) {
-			kill_player()
-			break
-		}
-	}
-
-	for cannon_ball in g.cannon_balls {
-		if cannon_ball.remaining_life > 0 {
-			if circ_vs_rect_collide(
-				{cannon_ball.x, cannon_ball.y},
-				CANNON_CIRCLE_RADIUS - grace_margin,
-				g.player.rect,
-			) {
+		grace_margin :: 0.1 // shrink lava to favor player
+		// handle lava
+		for tile in g.tiles {
+			if tile.type != .LavaTile do continue
+			tile_rect := rl.Rectangle {
+				f32(tile.x) + grace_margin,
+				f32(tile.y) + grace_margin,
+				1.0 - 2 * grace_margin,
+				1.0 - 2 * grace_margin,
+			}
+			if is_colliding(g.player.rect, tile_rect) {
 				kill_player()
 				break
+			}
+		}
+
+		for cannon_ball in g.cannon_balls {
+			if cannon_ball.remaining_life > 0 {
+				if circ_vs_rect_collide(
+					{cannon_ball.x, cannon_ball.y},
+					CANNON_CIRCLE_RADIUS - grace_margin,
+					g.player.rect,
+				) {
+					kill_player()
+					break
+				}
 			}
 		}
 	}
