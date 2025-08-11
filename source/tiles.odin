@@ -5,7 +5,7 @@ import rl "vendor:raylib"
 
 CANNON_CIRCLE_RADIUS :: .33
 
-TileType :: enum {
+TileType :: enum i32 {
 	None,
 	SolidTile,
 	LavaTile,

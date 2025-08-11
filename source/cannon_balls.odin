@@ -6,7 +6,7 @@ import rl "vendor:raylib"
 MAX_CANNON_BALLS :: 1024
 LIFE_SPAN :: 60
 
-CannonBall :: struct {
+Cannon_Ball :: struct {
 	remaining_life: f32,
 	x:              f32,
 	y:              f32,
@@ -16,7 +16,7 @@ CannonBall :: struct {
 cannon_ball_add :: proc(x, y, angle: f32) {
 	for i in 0 ..< MAX_CANNON_BALLS {
 		if g.cannon_balls[i].remaining_life <= 0 {
-			g.cannon_balls[i] = CannonBall{LIFE_SPAN, x, y, angle}
+			g.cannon_balls[i] = Cannon_Ball{LIFE_SPAN, x, y, angle}
 			return
 		}
 	}
@@ -28,7 +28,7 @@ cannon_balls_update :: proc(delta_time: f32) {
 		if g.cannon_balls[i].remaining_life > 0 {
 			g.cannon_balls[i].remaining_life -= delta_time
 			if g.cannon_balls[i].remaining_life <= 0 {
-				g.cannon_balls[i] = CannonBall{}
+				g.cannon_balls[i] = Cannon_Ball{}
 			} else {
 				g.cannon_balls[i].x +=
 					math.cos(g.cannon_balls[i].angle) * delta_time * PLAYER_SPEED
@@ -46,7 +46,7 @@ cannon_balls_update :: proc(delta_time: f32) {
 						CANNON_CIRCLE_RADIUS * 2,
 					}
 					if rl.CheckCollisionRecs(ball_rect, tile_rect) {
-						g.cannon_balls[i] = CannonBall{} // remove the ball
+						g.cannon_balls[i] = Cannon_Ball{} // remove the ball
 						break // no need to check other tiles
 					}
 				}

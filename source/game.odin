@@ -11,12 +11,22 @@ INIT_HEIGHT :: 600
 MAX_TILES :: 1024
 CANNON_FIRE_RATE :: 1
 
+Game_State :: enum {
+	Level_Select,
+	Playing,
+}
+
+Level_Select :: struct {
+	level_index: i32,
+}
+
 Game_Memory :: struct {
+	game_state:                  Game_State,
 	player:                      Player,
 	camera:                      rl.Camera2D,
 	zoom_factor:                 f32,
 	tiles:                       [MAX_TILES]Tile,
-	cannon_balls:                [MAX_CANNON_BALLS]CannonBall,
+	cannon_balls:                [MAX_CANNON_BALLS]Cannon_Ball,
 	time_since_last_cannon_fire: f32,
 	spawn:                       rl.Vector2,
 	editing:                     bool,
@@ -39,54 +49,91 @@ g: ^Game_Memory
 @(export)
 game_update :: proc() {
 	delta_time := rl.GetFrameTime()
+	g.game_state = Game_State.Playing
 
-	g.mouse_in_screen = rl.GetMousePosition()
-	g.mouse_in_world = rl.GetScreenToWorld2D(g.mouse_in_screen, g.camera)
-	g.mouse_tile_pos = [2]i32 {
-		i32(math.round(g.mouse_in_world.x)),
-		i32(math.round(g.mouse_in_world.y)),
-	}
+	switch g.game_state {
+	case .Level_Select:
+		// Handle level selection logic here
+		rl.BeginDrawing()
+		rl.ClearBackground(rl.RAYWHITE)
+		level_names :: []string {
+			"Level 1",
+			"Level 2",
+			"Level 3",
+			// Add more levels as needed
+		}
 
-	g.time_since_last_cannon_fire += delta_time
-	if g.time_since_last_cannon_fire > CANNON_FIRE_RATE {
-		g.time_since_last_cannon_fire -= CANNON_FIRE_RATE
-		for tile in g.tiles {
-			if tile.type == .CannonTile {
-				cannon_ball_add(tile.x, tile.y, tile.angle)
+
+		rl.EndDrawing()
+
+
+	case .Playing:
+		g.mouse_in_screen = rl.GetMousePosition()
+		g.mouse_in_world = rl.GetScreenToWorld2D(g.mouse_in_screen, g.camera)
+		g.mouse_tile_pos = [2]i32 {
+			i32(math.round(g.mouse_in_world.x)),
+			i32(math.round(g.mouse_in_world.y)),
+		}
+
+		g.time_since_last_cannon_fire += delta_time
+		if g.time_since_last_cannon_fire > CANNON_FIRE_RATE {
+			g.time_since_last_cannon_fire -= CANNON_FIRE_RATE
+			for tile in g.tiles {
+				if tile.type == .CannonTile {
+					cannon_ball_add(tile.x, tile.y, tile.angle)
+				}
 			}
 		}
-	}
-	cannon_balls_update(delta_time)
+		cannon_balls_update(delta_time)
 
-	if g.editing {
-		editor_update(delta_time)
-	} else {
-		playing_update(delta_time)
+		if g.editing {
+			editor_update(delta_time)
+		} else {
+			playing_update(delta_time)
+		}
+
+		if IsKeyPressed(.E) {
+			g.player.dy = 0
+			g.editing = !g.editing
+		}
+		zoom_speed: f32 = .5
+		if IsKeyDown(.EQUAL) {
+			g.zoom_factor += zoom_speed * delta_time
+		} else if IsKeyDown(.MINUS) {
+			g.zoom_factor -= zoom_speed * delta_time
+		}
+
+		{
+			default_game_height :: 20
+			screen_width := f32(rl.GetScreenWidth())
+			screen_height := f32(rl.GetScreenHeight())
+			g.camera.offset = {screen_width / 2, screen_height / 2}
+			g.camera.zoom = screen_height / default_game_height * g.zoom_factor
+			g.camera.target = {g.player.rect.x, g.player.rect.y}
+		}
+
+		game_draw()
+
 	}
 
-	if rl.IsKeyPressed(.E) {
-		g.player.dy = 0
-		g.editing = !g.editing
-	}
-	zoom_speed: f32 = .5
-	if rl.IsKeyDown(.EQUAL) {
-		g.zoom_factor += zoom_speed * delta_time
-	} else if rl.IsKeyDown(.MINUS) {
-		g.zoom_factor -= zoom_speed * delta_time
-	}
-
-	{
-		default_game_height :: 20
-		screen_width := f32(rl.GetScreenWidth())
-		screen_height := f32(rl.GetScreenHeight())
-		g.camera.offset = {screen_width / 2, screen_height / 2}
-		g.camera.zoom = screen_height / default_game_height * g.zoom_factor
-		g.camera.target = {g.player.rect.x, g.player.rect.y}
-	}
-
-	game_draw()
 
 	free_all(context.temp_allocator)
+}
+
+IsKeyPressed :: proc(key: rl.KeyboardKey) -> bool {
+	// respect editor ui using keyboard
+	if g.editing && g.editor.keyboard_input {
+		return false
+	}
+	return rl.IsKeyPressed(key)
+}
+
+IsKeyDown :: proc(key: rl.KeyboardKey) -> bool {
+	// respect editor ui using keyboard
+	if g.editing && g.editor.keyboard_input {
+		return false
+	}
+	return rl.IsKeyDown(key)
 }
 
 @(export)
@@ -169,12 +216,12 @@ game_hot_reloaded :: proc(mem: rawptr) {
 
 @(export)
 game_force_reload :: proc() -> bool {
-	return rl.IsKeyPressed(.F5)
+	return IsKeyPressed(.F5)
 }
 
 @(export)
 game_force_restart :: proc() -> bool {
-	return rl.IsKeyPressed(.F6)
+	return IsKeyPressed(.F6)
 }
 
 // In a web build, this is called when browser changes size. Remove the
@@ -208,6 +255,7 @@ game_draw :: proc() {
 	}
 	rl.EndMode2D()
 
+	rl.DrawFPS(10, 10 + FONT_SIZE * 2)
 	// draw editing text:
 	if (g.editing) {
 		tileTypeToName := TileTypeToName
@@ -223,8 +271,8 @@ game_draw :: proc() {
 			0,
 			rl.BLACK,
 		)
+		editor_ui()
 	}
-	rl.DrawFPS(10, 10 + FONT_SIZE * 2)
 
 	if (rl.GuiButton({f32(rl.GetScreenWidth() - 100), 10, 90, 30}, g.editing ? "Play" : "Edit")) {
 		g.player.dy = 0

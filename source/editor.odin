@@ -3,33 +3,38 @@ package game
 import cbor "core:encoding/cbor"
 import "core:math"
 import os "core:os"
+import strings "core:strings"
 import rl "vendor:raylib"
 
+LEVEL_NAME_MAX :: 40
 Editor :: struct {
-	placing_type: TileType,
+	placing_type:      TileType,
+	level_name_buffer: [40]byte,
+	keyboard_input:    bool,
+	mouse_input:       bool,
 }
 
 editor_update :: proc(delta_time: f32) {
 	speed :: 10
-	if rl.IsKeyDown(.LEFT) || rl.IsKeyDown(.A) {
+	if IsKeyDown(.LEFT) || IsKeyDown(.A) {
 		g.player.rect.x -= delta_time * speed
 	}
-	if rl.IsKeyDown(.RIGHT) || rl.IsKeyDown(.D) {
+	if IsKeyDown(.RIGHT) || IsKeyDown(.D) {
 		g.player.rect.x += delta_time * speed
 	}
-	if rl.IsKeyDown(.UP) || rl.IsKeyDown(.W) {
+	if IsKeyDown(.UP) || IsKeyDown(.W) {
 		g.player.rect.y -= delta_time * speed
 	}
-	if rl.IsKeyDown(.DOWN) || rl.IsKeyDown(.S) {
+	if IsKeyDown(.DOWN) || IsKeyDown(.S) {
 		g.player.rect.y += delta_time * speed
 	}
 
-	if rl.IsKeyPressed(.ONE) do g.editor.placing_type = .SolidTile
-	else if rl.IsKeyPressed(.ZERO) do g.editor.placing_type = .PlatformTile
-	else if rl.IsKeyPressed(.TWO) do g.editor.placing_type = .LavaTile
-	else if rl.IsKeyPressed(.THREE) do g.editor.placing_type = .CannonTile
-	else if rl.IsKeyPressed(.FOUR) do g.editor.placing_type = .TrampolineTile
-	else if rl.IsKeyPressed(.FIVE) do g.editor.placing_type = .PlatformTile
+	if IsKeyPressed(.ONE) do g.editor.placing_type = .SolidTile
+	else if IsKeyPressed(.ZERO) do g.editor.placing_type = .PlatformTile
+	else if IsKeyPressed(.TWO) do g.editor.placing_type = .LavaTile
+	else if IsKeyPressed(.THREE) do g.editor.placing_type = .CannonTile
+	else if IsKeyPressed(.FOUR) do g.editor.placing_type = .TrampolineTile
+	else if IsKeyPressed(.FIVE) do g.editor.placing_type = .PlatformTile
 
 	float_mouse_tile := rl.Vector2{f32(g.mouse_tile_pos[0]), f32(g.mouse_tile_pos[1])}
 
@@ -66,7 +71,7 @@ editor_update :: proc(delta_time: f32) {
 
 	LEVEL_FILE := "assets/level.cbor"
 
-	if rl.IsKeyPressed(.L) {
+	if IsKeyPressed(.L) {
 		// load game state from file
 		data, success := os.read_entire_file(LEVEL_FILE, context.temp_allocator)
 		if !success {
@@ -83,7 +88,7 @@ editor_update :: proc(delta_time: f32) {
 		}
 	}
 
-	if rl.IsKeyPressed(.P) {
+	if IsKeyPressed(.P) {
 		// save game state to file
 		data, err := cbor.marshal(g.tiles, cbor.ENCODE_SMALL, context.temp_allocator)
 		if err != nil {
@@ -91,5 +96,63 @@ editor_update :: proc(delta_time: f32) {
 			return
 		}
 		os.write_entire_file(LEVEL_FILE, data)
+	}
+}
+
+editor_ui :: proc() {
+	g.editor.keyboard_input = false
+	g.editor.mouse_input = false
+
+	rl.GuiSetFont(g.sans_font)
+	rl.GuiSetStyle(.DEFAULT, 16, FONT_SIZE)
+	x: f32 = 10
+	y: f32 = 10
+	rl.GuiPanel({x, 10, 200, 400}, "Editor")
+	y += 25
+	x += 10
+	rl.GuiLabel({x, y, 180, 20}, "Level name:")
+	y += 20
+	@(static) textbox_active: bool = false
+	if (rl.GuiTextBox(
+			   {x, y, 180, 20},
+			   cstring(&g.editor.level_name_buffer[0]),
+			   30,
+			   textbox_active,
+		   )) {
+		textbox_active = !textbox_active
+	}
+	if (textbox_active) {
+		g.editor.keyboard_input = true
+	}
+	y += 25
+	rl.GuiLabel({x, y, 180, 20}, "Place tile:")
+	y += 20
+
+	// tileTypeToName := TileTypeToName
+	// for name, i in tileTypeToName {
+	// 	if i == .None do continue
+	// 	if rl.GuiButton({x, y, 180, 20}, strings.clone_to_cstring(name, context.temp_allocator)) {
+	// 		g.editor.placing_type = i
+	// 	}
+	// 	y += 20
+	// }
+
+	// build strings from tile enum names
+	b := strings.builder_make(context.temp_allocator)
+	for name, i in TileTypeToName {
+		if i != .None {
+			strings.write_string(&b, "\n")
+		}
+		strings.write_string(&b, name)
+	}
+	tile_strings := strings.to_string(b)
+	@(static) dropdown_open: bool = false
+	if rl.GuiDropdownBox(
+		{x, y, 180, 20},
+		strings.clone_to_cstring(tile_strings, context.temp_allocator),
+		cast(^i32)&g.editor.placing_type,
+		dropdown_open,
+	) {
+		dropdown_open = !dropdown_open
 	}
 }
