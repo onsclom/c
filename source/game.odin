@@ -97,9 +97,9 @@ game_update :: proc() {
 			g.editing = !g.editing
 		}
 		zoom_speed: f32 = .5
-		if IsKeyDown(.EQUAL) {
+		if IsKeyDownRespectingEditor(.EQUAL) {
 			g.zoom_factor += zoom_speed * delta_time
-		} else if IsKeyDown(.MINUS) {
+		} else if IsKeyDownRespectingEditor(.MINUS) {
 			g.zoom_factor -= zoom_speed * delta_time
 		}
 
@@ -128,12 +128,20 @@ IsKeyPressed :: proc(key: rl.KeyboardKey) -> bool {
 	return rl.IsKeyPressed(key)
 }
 
-IsKeyDown :: proc(key: rl.KeyboardKey) -> bool {
+IsKeyDownRespectingEditor :: proc(key: rl.KeyboardKey) -> bool {
 	// respect editor ui using keyboard
 	if g.editing && g.editor.keyboard_input {
 		return false
 	}
 	return rl.IsKeyDown(key)
+}
+
+IsMouseButtonDownRespectingEditor :: proc(button: rl.MouseButton) -> bool {
+	// respect editor ui using mouse
+	if g.editing && g.editor.mouse_input {
+		return false
+	}
+	return rl.IsMouseButtonDown(button)
 }
 
 @(export)

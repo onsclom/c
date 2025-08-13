@@ -45,10 +45,10 @@ player_update :: proc(delta_time: f32) {
 			// handle movement and collisions in X axis
 			{
 				g.player.dx = 0 // reset dx for this tick
-				if (IsKeyDown(.LEFT) || IsKeyDown(.A)) {
+				if (IsKeyDownRespectingEditor(.LEFT) || IsKeyDownRespectingEditor(.A)) {
 					g.player.dx += -PLAYER_SPEED * physic_tick // move left
 				}
-				if (IsKeyDown(.RIGHT) || IsKeyDown(.D)) {
+				if (IsKeyDownRespectingEditor(.RIGHT) || IsKeyDownRespectingEditor(.D)) {
 					g.player.dx += PLAYER_SPEED * physic_tick // move right
 				}
 				g.player.rect.x += g.player.dx
@@ -93,7 +93,10 @@ player_update :: proc(delta_time: f32) {
 						rl.PlaySound(g.jump_sound)
 					}
 				}
-				jump_keys_are_up := !IsKeyDown(.SPACE) && !IsKeyDown(.UP) && !IsKeyDown(.W)
+				jump_keys_are_up :=
+					!IsKeyDownRespectingEditor(.SPACE) &&
+					!IsKeyDownRespectingEditor(.UP) &&
+					!IsKeyDownRespectingEditor(.W)
 				if g.player.can_shorten_jump && jump_keys_are_up && g.player.dy < 0 {
 					g.player.dy *= 0.5 // shorten jump
 					g.player.can_shorten_jump = false
@@ -139,7 +142,9 @@ player_update :: proc(delta_time: f32) {
 							was_above_previously :=
 								prev_y + g.player.rect.height / 2.0 <
 								tile_rect.y - tile_rect.height / 2.0
-							if was_above_previously && !(IsKeyDown(.DOWN) || IsKeyDown(.S)) {
+							if was_above_previously &&
+							   !(IsKeyDownRespectingEditor(.DOWN) ||
+									   IsKeyDownRespectingEditor(.S)) {
 								handle_landing(tile_rect)
 							}
 						}

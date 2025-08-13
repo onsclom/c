@@ -16,16 +16,16 @@ Editor :: struct {
 
 editor_update :: proc(delta_time: f32) {
 	speed :: 10
-	if IsKeyDown(.LEFT) || IsKeyDown(.A) {
+	if IsKeyDownRespectingEditor(.LEFT) || IsKeyDownRespectingEditor(.A) {
 		g.player.rect.x -= delta_time * speed
 	}
-	if IsKeyDown(.RIGHT) || IsKeyDown(.D) {
+	if IsKeyDownRespectingEditor(.RIGHT) || IsKeyDownRespectingEditor(.D) {
 		g.player.rect.x += delta_time * speed
 	}
-	if IsKeyDown(.UP) || IsKeyDown(.W) {
+	if IsKeyDownRespectingEditor(.UP) || IsKeyDownRespectingEditor(.W) {
 		g.player.rect.y -= delta_time * speed
 	}
-	if IsKeyDown(.DOWN) || IsKeyDown(.S) {
+	if IsKeyDownRespectingEditor(.DOWN) || IsKeyDownRespectingEditor(.S) {
 		g.player.rect.y += delta_time * speed
 	}
 
@@ -38,7 +38,7 @@ editor_update :: proc(delta_time: f32) {
 
 	float_mouse_tile := rl.Vector2{f32(g.mouse_tile_pos[0]), f32(g.mouse_tile_pos[1])}
 
-	if rl.IsMouseButtonDown(.LEFT) {
+	if IsMouseButtonDownRespectingEditor(.LEFT) {
 		shouldAddTile := true
 		for &tile in g.tiles {
 			if tile.type != .None &&
@@ -59,7 +59,7 @@ editor_update :: proc(delta_time: f32) {
 			}
 		}
 		if shouldAddTile {add_tile(&g.tiles, g.mouse_tile_pos[0], g.mouse_tile_pos[1])}
-	} else if rl.IsMouseButtonDown(.RIGHT) {
+	} else if IsMouseButtonDownRespectingEditor(.RIGHT) {
 		for tile, i in g.tiles {
 			if tile.type != .None &&
 			   tile.x == f32(g.mouse_tile_pos[0]) &&
@@ -107,7 +107,16 @@ editor_ui :: proc() {
 	rl.GuiSetStyle(.DEFAULT, 16, FONT_SIZE)
 	x: f32 = 10
 	y: f32 = 10
-	rl.GuiPanel({x, 10, 200, 400}, "Editor")
+	panel_rect := rl.Rectangle{x, y, 200, 400}
+	rl.GuiPanel(panel_rect, "Editor")
+	mouse_pos := rl.GetMousePosition()
+	if (mouse_pos.x >= x &&
+		   mouse_pos.x <= x + panel_rect.width &&
+		   mouse_pos.y >= y &&
+		   mouse_pos.y <= y + panel_rect.height) {
+		g.editor.mouse_input = true
+	}
+
 	y += 25
 	x += 10
 	rl.GuiLabel({x, y, 180, 20}, "Level name:")
