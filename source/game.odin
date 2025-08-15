@@ -49,11 +49,10 @@ g: ^Game_Memory
 @(export)
 game_update :: proc() {
 	delta_time := rl.GetFrameTime()
-	g.game_state = Game_State.Playing
 
+	g.game_state = .Playing // default to playing state
 	switch g.game_state {
 	case .Level_Select:
-		// Handle level selection logic here
 		rl.BeginDrawing()
 		rl.ClearBackground(rl.RAYWHITE)
 		level_names :: []string {
@@ -62,8 +61,6 @@ game_update :: proc() {
 			"Level 3",
 			// Add more levels as needed
 		}
-
-
 		rl.EndDrawing()
 
 

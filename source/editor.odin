@@ -107,7 +107,7 @@ editor_ui :: proc() {
 	rl.GuiSetStyle(.DEFAULT, 16, FONT_SIZE)
 	x: f32 = 10
 	y: f32 = 10
-	panel_rect := rl.Rectangle{x, y, 200, 400}
+	panel_rect := rl.Rectangle{x, y, 200, 150}
 	rl.GuiPanel(panel_rect, "Editor")
 	mouse_pos := rl.GetMousePosition()
 	if (mouse_pos.x >= x &&
@@ -133,18 +133,25 @@ editor_ui :: proc() {
 	if (textbox_active) {
 		g.editor.keyboard_input = true
 	}
+
+
+	y += 25
+	{
+		ui_width :: 180
+		button_space :: 10
+		button_width :: (ui_width - button_space) / 2
+		// buttons for save and load
+		if (rl.GuiButton({x, y, button_width, 20}, "Save")) {
+			// TODO
+		}
+		if (rl.GuiButton({x + button_width + button_space, y, button_width, 20}, "Load")) {
+			// TODO
+		}
+	}
+
 	y += 25
 	rl.GuiLabel({x, y, 180, 20}, "Place tile:")
 	y += 20
-
-	// tileTypeToName := TileTypeToName
-	// for name, i in tileTypeToName {
-	// 	if i == .None do continue
-	// 	if rl.GuiButton({x, y, 180, 20}, strings.clone_to_cstring(name, context.temp_allocator)) {
-	// 		g.editor.placing_type = i
-	// 	}
-	// 	y += 20
-	// }
 
 	// build strings from tile enum names
 	b := strings.builder_make(context.temp_allocator)
